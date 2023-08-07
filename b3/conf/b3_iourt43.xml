@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--BigBrotherBot - http://bigbrotherbot.net - BigBrotherBot Config File Generator - Author: Freelander (Özgür Uysal) - http://ozguruys.al-->
+<!--Created by BigBrotherBot v1.10+ Config File Generator(v PB3.1) (31 Jul 2023 - Mon 09:53:35 UTC)-->
+<configuration>
+  <settings name="b3">
+    <set name="bot_name"></set>
+    <set name="bot_prefix"></set>
+    <set name="time_format">%I:%M%p %Z %m/%d/%y</set>
+    <set name="time_zone">GMT</set>
+    <set name="log_level">9</set>
+    <set name="logfile">@conf/b3.log</set>
+    <set name="parser">iourt43</set>
+    <set name="database">mysql://....:.....@......:3306/b3</set>
+  </settings>
+   <settings name="update">
+   <set name="channel">skip</set>
+   </settings>
+  <settings name="server">
+    <set name="public_ip">127.0.0.1</set>
+    <set name="port">27960</set>
+    <set name="rcon_ip">127.0.0.1</set>
+    <set name="rcon_password">....</set>
+    <set name="delay">0.18</set>
+    <set name="lines_per_second">50</set>
+    <set name="max_line_length">80</set>
+    <set name="game_log">/home/urt/news-urt/UrbanTerror43/q3ut4/games.log</set>
+    <set name="permban_with_frozensand">no</set>
+    <set name="tempban_with_frozensand">no</set>
+  </settings>
+  <settings name="autodoc">
+    <set name="type">html</set>
+    <set name="maxlevel">100</set>
+    <set name="destination">@conf/b3_doc.html</set>
+  </settings>
+  <settings name="update">
+    <set name="channel">stable</set>
+  </settings>
+  <settings name="messages">
+    <set name="kicked_by">$clientname^7 was kicked by $adminname^7 $reason</set>
+    <set name="kicked">$clientname^7 was kicked $reason</set>
+    <set name="banned_by">$clientname^7 was banned by $adminname^7 $reason</set>
+    <set name="banned">$clientname^7 was banned $reason</set>
+    <set name="temp_banned_by">$clientname^7 was temp banned by $adminname^7 for $banduration^7 $reason</set>
+    <set name="temp_banned">$clientname^7 was temp banned for $banduration^7 $reason</set>
+    <set name="unbanned_by">$clientname^7 was un-banned by $adminname^7 $reason</set>
+    <set name="unbanned">$clientname^7 was un-banned $reason</set>
+  </settings>
+  <settings name="plugins">
+    <set name="external_dir">@b3/extplugins</set>
+  </settings>
+  <plugins>
+    <plugin name="admin" config="@conf/plugin_admin.ini"/>
+	<plugin name="jumper" config="@conf/plugin_jumper.ini"/>
+	<plugin name="pluginmanager" config="@b3/conf/plugin_pluginmanager.ini" />
+	<plugin name="urtserversidedemo" config="@b3/conf/plugin_urtserversidedemo.ini" />
+  </plugins>
+</configuration>
